@@ -19,6 +19,9 @@ spec:
           image: adamlamri/udagram-api-feed:v1
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
           envFrom:
             - configMapRef:
                 name: lamri-config-map
